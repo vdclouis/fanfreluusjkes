@@ -1,2 +1,3 @@
 name: Fanfreluusjkes
 pygments: true
+destination: _site
