@@ -98,19 +98,21 @@ header {
 
 .buy {
   background: $lg;
+  padding: 40px 0;
   
   .flex {
-    display: -webkit-flex;
-    display:         flex;
     margin: 0 auto;
+    text-align: center;
     max-width: 960px;
     
-    -webkit-flex-flow: row;
-            flex-flow: row;
-    
     div {
-      margin: 10px;
+      margin: 10px 5px;
       background: white;
+      height: 210px;
+      width: 30%;
+      min-width: 200px;
+      display: inline-block;
+      vertical-align: top;
       //border: 1px solid black;
       
       h3 {
@@ -147,7 +149,7 @@ header {
         width: 50%;
         border-radius: 3px;
         background: $red;
-        box-shadow: 0 5px 0 darken($red, 10%);
+        box-shadow: 0 3px 0 darken($red, 10%);
         color: $lg;
         text-align: center;
         text-decoration: none;
@@ -155,26 +157,10 @@ header {
     }
    
     .left {
-      // grow, shrink, basis
-      -webkit-flex: 33%;
-              flex: 33%;
-     
-      -webkit-order: 1;
-              order: 1;
     }
     .center {
-      -webkit-flex: 33%;
-              flex: 33%;
-     
-      -webkit-order: 2;
-              order: 2;
     }
     .right {
-      -webkit-flex: 33%;
-              flex: 33%;
-     
-      -webkit-order: 3;
-              order: 3;
     }
   }
 }
@@ -188,3 +174,22 @@ footer {
     margin: 0;
   }
 }
+
+@media only screen and (max-width: 680px) {
+    .buy {
+      .flex {
+        
+        div {
+          display: block;
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          -ms-box-sizing: border-box;
+          box-sizing: border-box;
+          padding: 10px;
+          width: 100%;
+          margin: 10px auto;
+        }
+      }
+    }
+}
+
