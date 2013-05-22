@@ -1,1 +1,101 @@
 @import url(normalize.css);
+
+$red:   #FF0000;
+$text:  rgba(0,0,0,.7);
+$grey:  rgba(0,0,0,.1);
+
+.container {
+  //max-width: 960px;
+  margin: 0 auto;
+}
+
+header {
+  background: white;
+  
+  h1 {
+    color: $red;
+    text-align: center;
+    
+    a {
+      text-decoration: none;
+    }
+  }
+  
+  h2 {
+    text-align: center;
+    color: $text;
+  }
+}
+
+.img {
+  background: $grey;
+  
+  figure{
+    
+    img {
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+    }
+    
+    figcaption {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+    } 
+  }
+}
+
+.blank {
+  height: 200px;
+}
+
+.buy {
+  background: $grey; 
+  height: 200px;
+  
+  .flex {
+    max-width: 960px;
+    margin: 0 auto;
+    display: -webkit-flex;
+    display:         flex;
+    
+    -webkit-flex-flow: row;
+            flex-flow: row;
+    
+    div {
+      background: white;
+      border: 1px solid black;
+      margin: 10px;
+      height: 100px;
+    }
+   
+    .left {
+      // grow, shrink, basis
+      -webkit-flex: 33%;
+              flex: 33%;
+     
+      -webkit-order: 1;
+              order: 1;
+    }
+    .center {
+      -webkit-flex: 33%;
+              flex: 33%;
+     
+      -webkit-order: 2;
+              order: 2;
+    }
+    .right {
+      -webkit-flex: 33%;
+              flex: 33%;
+     
+      -webkit-order: 3;
+              order: 3;
+    }
+  }
+}
+
+footer {
+  background: $text;
+  height: 200px;
+}
