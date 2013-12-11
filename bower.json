@@ -1,0 +1,16 @@
+{
+  "name": "fanfreluusjkes",
+  "version": "0.0.1",
+  "homepage": "www.fanfreluusjkes.be",
+  "authors": [
+    "Louis Van de Calseyde <vdc.louis@gmail.com>"
+  ],
+  "description": "icon set",
+  "main": "index.html",
+  "keywords": [
+    "icon",
+    "set",
+    "gent"
+  ],
+  "license": "MIT"
+}

@@ -1,4 +1,4 @@
-@import url(normalize.css);
+@import "compass/css3";
 
 @font-face {
   font-weight: normal;
@@ -143,6 +143,8 @@ header {
       }
       
       a {
+        @include transition(all .1s linear);
+        @include transform(translateZ(0));
         display: block;
         margin: 0 auto 10px auto;
         padding: 10px;
@@ -153,25 +155,10 @@ header {
         color: $lg;
         text-align: center;
         text-decoration: none;
-        -webkit-transition: all .1s linear;
-        -moz-transition: all .1s linear;
-        -ms-transition: all .1s linear;
-        -o-transition: all .1s linear;
-        transition: all .1s linear;
-        
-        -webkit-transform: translateZ(0);
-        -moz-transform: translateZ(0);
-        -ms-transform: translateZ(0);
-        -o-transform: translateZ(0);
-        transform: translateZ(0);
         
         &:active {
+          @include transform(translate3d(0, 3px, 0));
           box-shadow: none;
-          -webkit-transform: translate3d(0, 3px, 0);
-          -moz-transform: translate3d(0, 3px, 0);
-          -ms-transform: translate3d(0, 3px, 0);
-          -o-transform: translate3d(0, 3px, 0);
-          transform: translate3d(0, 3px, 0);
 
         }
       }
@@ -189,10 +176,28 @@ header {
 footer {
   background: $text;
   color: $lg;
-  text-align: center;
-  
-  h2 {
+  padding: 20px;
+
+  ul {
+    padding: 0;
+
+    li {
+      list-style: none;
+    }
+  }
+
+  p {
     margin: 0;
+  }
+
+  a {
+    text-decoration: none;
+    color: $lg;
+
+    &:hover {
+      text-decoration: underline;
+      
+    }
   }
 }
 
@@ -201,16 +206,12 @@ footer {
       .flex {
         
         div {
+          @include box-sizing(border-box);
           display: block;
-          -webkit-box-sizing: border-box;
-          -moz-box-sizing: border-box;
-          box-sizing: border-box;
           margin: 10px auto;
           padding: 10px;
           width: 100%;
-          -ms-box-sizing: border-box;
         }
       }
     }
 }
-
